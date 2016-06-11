@@ -32,8 +32,12 @@
 #ifdef SQLITE_HAS_CODEC
 
 #include <assert.h>
+/******** BEGIN SQLCIPHER AMALGAMATION ********/
+#if !SQLITE_AMALGAMATION
 #include "sqliteInt.h"
 #include "btreeInt.h"
+#endif
+/******** END SQLCIPHER AMALGAMATION ********/
 #include "crypto.h"
 
 static const char* codec_get_cipher_version() {

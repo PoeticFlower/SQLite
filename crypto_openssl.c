@@ -31,7 +31,11 @@
 /* BEGIN SQLCIPHER */
 #ifdef SQLITE_HAS_CODEC
 #ifdef SQLCIPHER_CRYPTO_OPENSSL
+/******** BEGIN SQLCIPHER AMALGAMATION ********/
+#if !SQLITE_AMALGAMATION
 #include "sqliteInt.h"
+#endif
+/******** END SQLCIPHER AMALGAMATION ********/
 #include "crypto.h"
 #include "sqlcipher.h"
 #include <openssl/rand.h>

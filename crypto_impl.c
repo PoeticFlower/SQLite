@@ -31,8 +31,12 @@
 /* BEGIN SQLCIPHER */
 #ifdef SQLITE_HAS_CODEC
 
+/******** BEGIN SQLCIPHER AMALGAMATION ********/
+#if !SQLITE_AMALGAMATION
 #include "sqliteInt.h"
 #include "btreeInt.h"
+#endif
+/******** END SQLCIPHER AMALGAMATION ********/
 #include "sqlcipher.h"
 #include "crypto.h"
 #ifndef OMIT_MEMLOCK
