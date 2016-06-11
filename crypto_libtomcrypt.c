@@ -31,7 +31,11 @@
 /* BEGIN SQLCIPHER */
 #ifdef SQLITE_HAS_CODEC
 #ifdef SQLCIPHER_CRYPTO_LIBTOMCRYPT
+/******** BEGIN SQLCIPHER AMALGAMATION ********/
+#if !SQLITE_AMALGAMATION
 #include "sqliteInt.h"
+#endif
+/******** END SQLCIPHER AMALGAMATION ********/
 #include "sqlcipher.h"
 #include <tomcrypt.h>
 
