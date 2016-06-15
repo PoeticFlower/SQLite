@@ -32,6 +32,10 @@ if(WIN32 AND (NOT USE_STATIC_SQLITE))
     endif(CMAKE_CL_64)
 endif(WIN32 AND (NOT USE_STATIC_SQLITE))
 
+include_directories(
+    ${OPENSSL_INCLUDE_DIR}
+    )
+
 if(UNIX OR MINGW)
     list(APPEND PLATFORM_LIBRARIES m pthread)
 endif(UNIX OR MINGW)
@@ -50,6 +54,10 @@ target_compile_definitions(sqlite3
     PUBLIC -DSQLITE_ENABLE_FTS5=1
     PUBLIC -DSQLITE_ENABLE_RTREE=1
     PUBLIC -DSQLITE_ENABLE_COLUMN_METADATA=1
+    PUBLIC -DSQLITE_HAS_CODEC=1
+    )
+target_link_libraries(sqlite3
+    ${OPENSSL_CRYPTO_LIBRARY}
     )
 target_link_libraries(sqlite3-cli
     sqlite3
