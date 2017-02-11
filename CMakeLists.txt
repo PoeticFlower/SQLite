@@ -33,7 +33,7 @@ if(WIN32 AND (NOT USE_STATIC_SQLITE))
 endif(WIN32 AND (NOT USE_STATIC_SQLITE))
 
 if(UNIX OR MINGW)
-    list(APPEND PLATFORM_LIBRARIES m pthread)
+    list(APPEND PLATFORM_LIBRARIES m pthread dl)
 endif(UNIX OR MINGW)
 
 add_library(sqlite3
