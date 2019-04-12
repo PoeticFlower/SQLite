@@ -102,6 +102,7 @@ sqlite3_file_control
 sqlite3_finalize
 sqlite3_free
 sqlite3_free_table
+sqlite3_fts3_may_be_corrupt
 sqlite3_fts5_may_be_corrupt
 sqlite3_get_autocommit
 sqlite3_get_auxdata
